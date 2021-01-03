@@ -15,6 +15,10 @@ Create a table that displays creditor data, retrieved from a url, with selectabl
     * When the Remove Debt button is clicked, remove all selected rows from the creditor table.
 * Display totals for selected debt, row count and selected row count below the buttons.
     * Totals should be updated automatically when changes are made to the table.
+    
+## Solution Demonstration Video
+
+[https://youtu.be/o7ESMBxfXSs](https://youtu.be/o7ESMBxfXSs)
 
 ## Classes Created
 
