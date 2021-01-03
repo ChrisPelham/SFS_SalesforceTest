@@ -41,23 +41,24 @@ export default class CreditorTable extends LightningElement
 
         getMasterSheet()
         .then(data => 
-            {
-                this.data = data;
-                this.totalRows = data.length;
+        {
+            this.data = data;
+            this.totalRows = data.length;
 
-                this.isLoading = false;
+            this.isLoading = false;
         })
         .catch(error => 
-            {
-                this.dispatchEvent(
-                    new ShowToastEvent({
-                        title: ERROR_TITLE,
-                        message: error.message.body,
-                        variant: ERROR_VARIANT,
-                    })
-                );
+        {
+            this.dispatchEvent(
+                new ShowToastEvent(
+                {
+                    title: ERROR_TITLE,
+                    message: error.message.body,
+                    variant: ERROR_VARIANT,
+                })
+            );
 
-                this.isLoading = false;
+            this.isLoading = false;
         });
     }
 
@@ -177,9 +178,11 @@ export default class CreditorTable extends LightningElement
     {
         this.isValid = true;
 
-        this.template.querySelectorAll('lightning-input').forEach(element => { 
+        this.template.querySelectorAll('lightning-input').forEach(element => 
+        { 
             element.reportValidity();
-            if (element.reportValidity() === false){
+            if (element.reportValidity() === false)
+            {
                 this.isValid = false;
             }
         }) ;
